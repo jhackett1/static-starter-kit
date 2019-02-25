@@ -1,0 +1,34 @@
+{
+  "name": "ett",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "lint": "gulp lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-nunjucks": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "path": "^0.12.7",
+    "webpack": "^4.28.2",
+    "webpack-stream": "^5.2.1",
+    "yaml": "^1.3.2"
+  },
+  "dependencies": {
+    "instafeed.js": "^1.4.1",
+    "simple-parallax-js": "^4.0.1"
+  }
+}
