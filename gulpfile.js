@@ -15,7 +15,7 @@ sass.compiler = require("node-sass")
 const runServer = () => {
     browserSync.init({
         server: {
-            baseDir: "./dist"
+            baseDir: "dist"
         }
     })
 }
@@ -27,6 +27,7 @@ const runServer = () => {
 
 // Watch for HTML changes, then compile
 const watchHtml = () => {
+    compileHtml()
     watch("./src/*.html", compileHtml)
         .on("change", browserSync.reload)
 }
@@ -44,11 +45,12 @@ const compileHtml = () => {
 
 // Watch for sass changes, then compile
 const watchSass = () => {
+    compileSass()
     watch(["src/sass/*"], compileSass)
 }
 // Compile sass
 const compileSass = () => {
-    return src("./src/sass/main.sass")
+    return src("./src/sass/main.scss")
         .pipe(sass({
             includePaths: ["node_modules"]
         }).on("error", sass.logError))
@@ -75,6 +77,7 @@ const compressImages = () => {
 }
 // Watch images folder
 const watchImages = () => {
+    compressImages()
     watch(["./src/img/*"], compressImages)
         .on("change", browserSync.reload)
 }
